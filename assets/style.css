@@ -42,6 +42,10 @@ body {
 	width: 20px;
 }
 
+h2 {
+	font-weight: 600;
+}
+
 #about {
 	display: flex;
 	background-color: #F6D2B8;
@@ -79,11 +83,14 @@ body {
 	margin-bottom: 60px;
 	font-size: 30px;
 }
-.about-me__introduction {
+b {
+	display: block;
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
+	font-size: 16px;
+	line-height: 20px;
 }
 #about-me p {
 	width: 80%;
@@ -102,7 +109,7 @@ body {
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
-	background-color: #BEB45A;
+	background-color: #8d853f;
 	border-radius:0 ;
 }
 .nav-pills .nav-link {
