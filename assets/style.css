@@ -6,6 +6,11 @@ body {
 	font-family: 'Inter';
 	font-style: normal;
 }
+
+.hidden {
+	display: none;
+}
+
 .top-header {
 	background-color: white;
 	position: sticky;
@@ -97,51 +102,131 @@ b {
 	font-size: 14px;
 }
 
+
+
+/* Gallery */
+
 #gallery {
-	/*	min-height: 100vh; */
+	width: 100%;
+	min-height: 100vh;
 }
+
 .title{
 	text-align: center;
 	padding-block: 2em;
 }
-.gallery .nav {
+
+.main-container {
+	width: 100%;
+	padding: 0px 5%;
+}
+
+.button-group {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.button-group .button {
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 10px;
+	background-color: white;
+	border: none;
+}
+
+.button-group .button.active {
+	background-color: #7a732c;
+	color: white;
+}
+
+.button-group .button:hover {
+	background-color: #7a732c;
+	color: white;
+}
+
+.gallery {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 }
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #fff;
-	background-color: #7a732c;
-	border-radius:0 ;
-}
-.nav-pills .nav-link {
-	color: #000
-}
-.item-column {
-	position: relative;
-	margin-bottom: 0 !important;
-	padding: 0;
-}
-.item-column::after{
-	content: "";
-	display: block;
-	padding-bottom: 100%;
 
+.gallery .gallery-item {
+	position: relative;
+	width: 30%;
+	margin: 12px;
+	overflow: hidden;
+	cursor: zoom-in;
+	aspect-ratio: 1 / 1;
 }
-.gallery-item {
-	position: absolute;
+
+.gallery-item img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	padding: .5em;
 }
-.mg-prev, .mg-next {
-	width: 30px;
-	height: 30px;
-	border-radius: 00%;
+
+.gallery-item:hover img {
+	transform: scale(1.1);
+}
+
+
+
+
+/* Modal */
+
+.container-modal {
+	display: none;
 	justify-content: center;
 	align-items: center;
-	display: flex;
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	left: 50%;
+	z-index: 9999;
+}
+
+.img-modal {
+	background-color: white;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	padding: 20px;
+	box-sizing: content-box;
+
+}
+
+.img-modal img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.modal-buttons {
+	cursor: pointer;
+	background: white;
+	padding: 0 8px;
 	font-size: 24px;
 }
+
+.backdrop {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	background-color:  rgba(0, 0, 0, 0.2);
+	z-index: 1001;
+
+}
+
+
+
+
+
+/* Quote */
 
 .quote {
 	font-family: 'Spectral';
@@ -161,6 +246,10 @@ b {
 	font-weight: 800;
 	font-size: 22px;
 }
+
+
+
+/* Services */
 
 #services {
 	margin: auto;
@@ -196,6 +285,10 @@ b {
 	justify-content: space-between;
 	z-index: 1;
 }
+
+
+
+/* Contact */
 
 #contact {
 	margin: auto;
@@ -250,6 +343,12 @@ input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
 }
+
+
+
+
+
+/* Media Queries */
 
 @media all and (max-width: 1180px) {
 	.picture {
